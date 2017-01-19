@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>Club_name</td>
+    <td>Position</td>
+    <td>Topscorer</td>
+  </tr>
+  <% @all_clubs.each do |club| %> 
+  <tr>
+    <td><%= club.club_name %></td>
+    <td><%= club.position %></td>
+    <td><%= club.top_score %></td>
+  </tr>
+  <% end %> 
+</table>
