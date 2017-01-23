@@ -1,0 +1,17 @@
+ <%= form_tag "/clubs", method: :post do %>
+   <div>
+     Club Name: <input type="text" name="club_name"><br>
+   </div>
+   <h1>          </h1>
+   <div>
+      Position: <input type="text" name="position"><br>
+   </div>
+   <h1>          </h1>
+   <div>
+      Topscorer: <input type="text" name="top_score"><br>
+   </div>
+   <h1>           </h1>
+   <div>
+     <input type="submit" value="Add Club"> 
+   </div> 
+   <% end %>

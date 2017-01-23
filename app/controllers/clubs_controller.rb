@@ -1,5 +1,6 @@
 class ClubsController < ApplicationController
   def chelsea 
+    ghg
     @club = Club.first 
     render "chelsea.html"
   end 
@@ -14,8 +15,24 @@ class ClubsController < ApplicationController
     render "arsenal.html"
   end 
 
-  def all_clubs
+  def index
     @all_clubs = Club.all 
-    render "all_clubs.html"
+    render "index.html"
+  end 
+
+  def show 
+  @club = Club.find_by(id: params[:id]) 
+  render "show.html.erb"
+  end
+
+   def new 
+  end 
+
+  def create 
+    club_name = params[:club_name]
+    position = params[:position]
+    top_score = params[:top_score]
+    club = Club.new({club_name: club_name, position: position, top_score: top_score})
+    club.save 
   end 
 end
