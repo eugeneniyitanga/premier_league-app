@@ -1,0 +1,25 @@
+<h1>           </h1>
+
+<h1>Edit Clubs</h1>
+
+<h1>              </h1>
+
+<%= form_tag "/clubs/#{@club.id}", method: :patch do -%>
+<h1>       </h1>
+  <div>
+    Club Name: <input type="text" name="club_name" value="<%= @club.club_name %>">
+  </div>
+  <h1>           </h1>
+  <div>
+    Position: <input type="text" name="position" value="<%= @club.position %>">
+  </div>
+  <h1>            </h1>
+  <div>
+    Topscorer: <input type="text" name="top_score" value="<%= @club.top_score %>">
+  </div>
+<h1>                 </h1>
+  <div>
+    <input type="submit" value="Update Club">
+  </div>
+
+<% end %>

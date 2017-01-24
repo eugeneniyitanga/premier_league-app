@@ -35,4 +35,16 @@ class ClubsController < ApplicationController
     club = Club.new({club_name: club_name, position: position, top_score: top_score})
     club.save 
   end 
+
+  def edit
+    @club = Club.find_by(id: params[:id])
+  end
+
+  def update
+    @club = Club.find_by(id: params[:id])
+    @club.club_name = params[:club_name]
+    @club.position = params[:position]
+    @club.top_score = params[:top_score]
+    @club.save
+  end
 end
