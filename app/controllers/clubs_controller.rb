@@ -47,4 +47,12 @@ class ClubsController < ApplicationController
     @club.top_score = params[:top_score]
     @club.save
   end
+
+  def destroy 
+    @club = Club.find_by(id: params[:id])
+    @club.club_name = params[:club_name]
+    @club.position = params[:position]
+    @club.top_score = params[:top_score]
+    @club.save
+   end 
 end

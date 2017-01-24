@@ -12,4 +12,8 @@
     <td><%= @club.position %></td>
     <td><%= @club.top_score %></td>
   </tr>   
-</table>
+</table> 
+
+<%= form_tag "/clubs/#{@club.id}", method: :delete do %>
+  <input type="submit" value="Destroy Club">
+<% end %>

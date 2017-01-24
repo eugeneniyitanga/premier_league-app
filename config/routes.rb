@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post "/clubs", to: 'clubs#create'
   get "/clubs/:id/edit", to: 'clubs#edit'
   patch "/clubs/:id",to: 'clubs#update'
+  delete "//clubs/:id", to: 'clubs#destroy'
 end
